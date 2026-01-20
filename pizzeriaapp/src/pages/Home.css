@@ -1,0 +1,124 @@
+/* Smooth scrolling feel */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page container */
+.home-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+  background: #fff;
+}
+
+/* Section spacing */
+.home-section {
+  margin-bottom: 80px;
+}
+
+/* Headings */
+.home-section h1,
+.home-section h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+  position: relative;
+}
+
+/* Small underline animation */
+.home-section h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #f7b500;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Intro paragraphs */
+.intro-text {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto 15px;
+}
+
+/* Flex layout */
+.content-flex {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Reverse sections */
+.content-flex.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text block */
+.text-block {
+  flex: 1;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* Image block */
+.image-block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Image styling + hover */
+.story-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+/* Hover effect */
+.story-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+/* Fade-in animation */
+.home-section {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content-flex,
+  .content-flex.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-section h1,
+  .home-section h2 {
+    font-size: 24px;
+  }
+}
+  
+  
